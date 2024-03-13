@@ -24,22 +24,43 @@ Representa un plato de comida.
 
 ## Consulta
 
-### Platos
+### Devolver platos 
 Devuelve una lista de platos.
 
 ```graphql
 platos: [Plato!]!
 ```
 
-## Estructura del Proyecto
-- **/src**: Contiene el código fuente de la aplicación.
-  
-## Requisitos Previos
-Para ejecutar este proyecto, se necesita tener instalado Apollo.
+### Devvolver Platos por ID
+#### Descripción
+Esta API proporciona la funcionalidad para buscar un plato por su ID.
+
+##### Endpoint
+GET /platos/:id
+
+
+##### Parámetros de la URL
+- `id`: El identificador único del plato que se desea buscar.
+
+##### Respuesta Exitosa
+- **Código:** 200 OK
+- **Contenido:** Un objeto JSON representando el plato encontrado.
+
+```json
+{
+  "_id": "64cc474c3b173649391f1eaa",
+  "idDish": "12314564456",
+  "nombre": "Mas pollo",
+  "calorias": 200,
+  "esVegetariano": false,
+  "valor": 40000,
+  "comentarios": "Pollo cocinado a las finas hierbas"
+}
+```
 
 ## Configuración
-1. Clona este repositorio.
-2. Instala las dependencias ejecutando `npm install`
+1. Clonar este repositorio.
+2. Instalar las dependencias ejecutando `npm install`
 
 # Documentación del Proyecto
 

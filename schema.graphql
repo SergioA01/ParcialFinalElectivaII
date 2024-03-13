@@ -1,0 +1,8 @@
+type Query {
+  obtenerPlatos(id: ID!): Platos
+}
+
+type Platos {
+  id: ID!
+  
+}

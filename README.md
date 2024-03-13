@@ -30,8 +30,40 @@ Devuelve una lista de platos.
 ```graphql
 platos: [Plato!]!
 ```
+Esta API proporciona la funcionalidad para obtener la lista de todos los platos disponibles.
 
-### Devvolver Platos por ID
+##### Endpoint
+GET /platos
+
+
+##### Respuesta Exitosa
+- **Código:** 200 OK
+- **Contenido:** Una lista de objetos JSON, cada uno representando un plato.
+
+```json
+[
+  {
+    "_id": "64cc474c3b173649391f1eaa",
+    "idDish": "12314564456",
+    "nombre": "Mas pollo",
+    "calorias": 200,
+    "esVegetariano": false,
+    "valor": 40000,
+    "comentarios": "Pollo cocinado a las finas hierbas"
+  },
+  {
+    "_id": "64cc48723b173649391f1ed8",
+    "idDish": "123as",
+    "nombre": "Ajiaco",
+    "calorias": 400,
+    "esVegetariano": false,
+    "valor": 10000,
+    "comentarios": "Rica sopa"
+  },
+  ...
+]
+```
+### Devolver Platos por ID
 #### Descripción
 Esta API proporciona la funcionalidad para buscar un plato por su ID.
 

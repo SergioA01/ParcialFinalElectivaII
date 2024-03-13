@@ -4,7 +4,7 @@ const resolvers = require('./resolvers');
 
 const typeDefs = gql`
   type Query {
-    obtenerPlatos: String  # Puedes ajustar el tipo de retorno según tus necesidades
+    obtenerPlatos: String
   }
 `;
 

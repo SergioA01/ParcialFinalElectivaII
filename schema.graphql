@@ -1,6 +1,10 @@
 type Query {
   obtenerPlatos(id: ID!): Platos
+  obtenerPlatoPorNombre(id: _id): Plato
 }
+type Plato {
+    name: String
+  }
 
 type Platos {
   id: ID!

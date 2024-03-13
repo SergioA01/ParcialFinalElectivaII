@@ -5,15 +5,17 @@ const resolvers = {
     obtenerPlatos: async (_) => {
       try {
         const response = await axios.get(`https://api-dishes.vercel.app`);
-
-        if (!response.data || !response.data.plato) {
-          throw new Error('La respuesta de la API no tiene el formato esperado.');
-        }
-
-        const platoData = response.data.plato;
+        
+        // if (!response.data || !response.data.plato) {
+          //   throw new Error('La respuesta de la API no tiene el formato esperado.');
+          // }
+          
+        const platoData = response.data.data.plato;
+        
+        console.log(response.data.data);
 
         const plato = {
-          id: platoData.id,
+          _id: platoData._id,
           idDish: platoData.idDish,
           name: platoData.name,
           calories: platoData.calories,
@@ -31,6 +33,15 @@ const resolvers = {
         throw new Error('No se pudieron obtener los datos de los platos.');
       }
     },
+    obtenerPlatoPorNombre: async(_, id) => {
+      try {
+        const response = await axios.get(`https://api-dishes.vercel.app/${id}`);
+        console.log(response);
+        
+      } catch (error) {
+        
+      }
+    }
   },
 };
 
